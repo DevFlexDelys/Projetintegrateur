@@ -1,0 +1,40 @@
+{
+  "info": {
+    "_postman_id": "fictitious-id-1234",
+    "name": "API E-commerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "http://localhost:8000/api/auth/register" },
+        "body": {
+          "mode": "raw",
+          "raw": "{ "name": "Test User", "email": "test@example.com", "password": "123456" }"
+        }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "http://localhost:8000/api/auth/login" },
+        "body": {
+          "mode": "raw",
+          "raw": "{ "email": "test@example.com", "password": "123456" }"
+        }
+      }
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/api/products" }
+      }
+    }
+  ]
+}
